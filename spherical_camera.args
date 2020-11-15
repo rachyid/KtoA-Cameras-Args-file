@@ -1,0 +1,53 @@
+<!-- args file created by: elrachyd@gmail.com -->
+<!-- date: 11/15/2020 -->
+
+<args format="1.0">
+
+<page name="Commom Attributes" open="True"> 
+	<param name="exposure" label="Exposure" slider="True" slidermin="-100.0" min="0.0 "slidermax="100.0" max="100.0"/>
+	<param name="rolling_shutter_duration" label="Rolling Shutter" slider="True"/>
+	<param name="filtermap" label="Filtermap"/>
+	<param widget="mapper" name="handedness">
+	<hintdict name="options">
+	<string 	value="right"/>
+	<string 	value="left"/>
+	</hintdict>
+	</param>
+	<param name="near_clip" label="Near Clip"/>
+	<param name="far_clip" label=" Far Clip"/>
+
+	<param name="shutter_start" label="Shutter Start" slider="True"/>
+	<param name="shutter_end" label="Shutter End" slider="True"/>
+	<param name="motion_start" label="Motion Start" slider="True"/>
+	<param name="motion_end" label="Motion End" slider="True"/>
+	<param widget="mapper" name="shutter_type">
+	<hintdict name="options">
+	<string 	value="box"/>
+	<string  	value="curve"/>
+	<string 	value="triangle"/>
+	</hintdict>
+	</param>
+	<param widget="mapper" name="rolling_shutter" label="Rolling Shutter">
+	<hintdict name="options">
+	<string 	value="top"/>
+	<string 	value="left"/>
+	<string 	value="off"/>
+	<string 	value="right"/>
+	<string 	value="bottom"/>
+	</hintdict>
+	</param>
+</page>
+
+<page name="Dynamic Array Attributes" open="False"> 
+	<param widget="sortableArray" isDynamicArray="1" name="screen_window_min"/>
+	<param widget="sortableArray" isDynamicArray="1" name="screen_window_max"/>	
+	<param widget="dynamicArray" isDynamicArray="1" name="shutter_curve" label="Shutter Curve"/>	
+</page>	
+
+<page name="Extra Attributes" open="False"> 
+	<param widget="dynamicArray" isDynamicArray="1" name="position"/>
+	<param widget="dynamicArray" isDynamicArray="1" name="look_at"/>
+	<param widget="dynamicArray" isDynamicArray="1" name="up"/>
+	<param tupleGroupSize="4" widget="dynamicArray" isDynamicArray="1" name="matrix"/>
+</page> 
+</args>
